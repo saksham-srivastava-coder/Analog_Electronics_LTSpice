@@ -41,20 +41,20 @@ To ensure the MOSFET operates as a linear amplifier, it must stay in the saturat
 ## 📈 2. Simulation Results & Waveforms
 
 ### A. Schematic Diagram
-![Schematic](schematic.png)
+![Schematic](Schematic.png)
 
 ### B. Transient Analysis (`.tran`) — Time-Domain Amplification
 * **Input Signal (`Vin`):** $10\text{ mV}$ peak sine wave at $10\text{ kHz}$
 * **Output Signal (`Vout`):** Amplified sine wave ($\sim 94.8\text{ mV}$ peak) with a **$180^\circ$ phase inversion**, matching the theoretical small-signal gain $A_v = -g_m (R_D \parallel r_o \parallel R_L) \approx -9.48\text{ V/V}$.
 
-![Transient Response](transient_waveform.png)
+![Transient Response](Transient_Waveform.png)
 
 ### C. AC Sweep Analysis (`.ac`) — Frequency Response (Bode Plot)
 * **Midband Gain:** $\sim 19.5\text{ dB}$ ($18.85\text{ dB}$ with a $10\text{ k}\Omega$ source resistance $R_{sig}$)
 * **Lower $-3\text{ dB}$ Cutoff ($f_L$):** $7.52\text{ Hz}$ (governed by coupling and source bypass capacitors $C_{in}, C_{out}, C_S$)
 * **Upper $-3\text{ dB}$ Cutoff ($f_H$):** $57.44\text{ MHz}$ with $R_{sig} = 10\text{ k}\Omega$ (demonstrating high-frequency roll-off due to MOSFET parasitic capacitances $C_{gs}, C_{gd}$ and the **Miller Effect**)
 
-![AC Bode Plot](ac_bode_plot.png)
+![AC Bode Plot](AC_Bode_Plot.png)
 
 ---
 
