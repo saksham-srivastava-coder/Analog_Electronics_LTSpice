@@ -52,7 +52,7 @@ To ensure the MOSFET operates as a linear amplifier, it must stay in the saturat
 ### C. AC Sweep Analysis (`.ac`) — Frequency Response (Bode Plot)
 * **Midband Gain:** $\sim 19.5\text{ dB}$ ($18.85\text{ dB}$ with a $10\text{ k}\Omega$ source resistance $R_{sig}$)
 * **Lower $-3\text{ dB}$ Cutoff ($f_L$):** $7.52\text{ Hz}$ (governed by coupling and source bypass capacitors $C_{in}, C_{out}, C_S$)
-* **Upper $-3\text{ dB}$ Cutoff ($f_H$):** $57.44\text{ MHz}$ with $R_{sig} = 10\text{ k}\Omega$ (demonstrating high-frequency roll-off due to MOSFET parasitic capacitances $C_{gs}, C_{gd}$ and the **Miller Effect**)
+* **Upper $-3\text{ dB}$ Cutoff ($f_H$):** $57.44\text{ MHz}$ with $R_{sig} = 10\text{ k}\Omega$
 
 ![AC Bode Plot](AC_Bode_Plot.png)
 
@@ -61,7 +61,6 @@ To ensure the MOSFET operates as a linear amplifier, it must stay in the saturat
 ## 🧠 Key Learnings
 * How to set up custom `.model` SPICE directives and configure 4-terminal MOSFET parameters ($W, L, V_{th}, K_P, \lambda$) in LTspice.
 * Why a source resistor ($R_S$) stabilizes the DC bias point and how a parallel bypass capacitor ($C_S$) recovers AC voltage gain.
-* Why ideal voltage sources ($R_{sig} = 0\text{ }\Omega$) mask input Miller capacitance in SPICE, and how adding a realistic source resistance reveals the true high-frequency bandwidth limit.
 
 ---
 
